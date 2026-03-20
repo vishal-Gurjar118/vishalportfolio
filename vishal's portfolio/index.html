@@ -1,0 +1,689 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-gray-900 text-white font-sans ">
+    <style>
+        /* main animated gradient background */
+        body {
+            margin: 0;
+            font-family: sans-serif;
+            background: linear-gradient(120deg, #0f172a, #020617, #1e293b);
+            overflow-x: hidden;
+        }
+
+        /* floating blobs */
+        .blob {
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            filter: blur(120px);
+            opacity: 0.5;
+            animation: moveBlob 20s infinite alternate ease-in-out;
+        }
+
+        /* different colors */
+        .blob1 {
+            background: #22d3ee;
+            top: 10%;
+            left: 5%;
+        }
+
+        .blob2 {
+            background: #a855f7;
+            top: 40%;
+            right: 10%;
+            animation-delay: 5s;
+        }
+
+        .blob3 {
+            background: #f97316;
+            bottom: 10%;
+            left: 30%;
+            animation-delay: 10s;
+        }
+
+        /* animation */
+        @keyframes moveBlob {
+            0% {
+                transform: translate(0, 0) scale(1);
+            }
+
+            50% {
+                transform: translate(100px, -80px) scale(1.2);
+            }
+
+            100% {
+                transform: translate(-80px, 120px) scale(0.9);
+            }
+        }
+
+        /* subtle grid overlay (pro look) */
+        .grid-overlay {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background-image:
+                linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+            pointer-events: none;
+        }
+    </style>
+
+    <!-- blobs -->
+    <div class="blob blob1"></div>
+    <div class="blob blob2"></div>
+    <div class="blob blob3"></div>
+
+    <!-- grid overlay -->
+    <div class="grid-overlay"></div>
+
+
+
+
+
+
+   
+
+
+
+
+    <div class="bg-gray-900 text-white">
+
+        <nav
+            class="flex justify-between items-center p-6 bg-gray-950 shadow-lg bg-[#020617] text-white p-4 flex justify-between ">
+
+            <h1 class="text-2xl font-bold text-purple-400">My Portfolio</h1>
+
+            <ul class="flex gap-8">
+
+                <li class="group">
+                    <a href="#home"
+                        class="relative text-gray-300 font-medium transition-all duration-300 group-hover:text-purple-400">
+                        Home
+                        <span
+                            class="absolute left-0 -bottom-1 w-0 h-[3px] bg-gradient-to-r from-purple-500 via-pink-500 to-orange-400 transition-all duration-500 group-hover:w-full"></span>
+                    </a>
+                </li>
+
+                <li class="group">
+                    <a href="#skills"
+                        class="relative text-gray-300 font-medium transition-all duration-300 group-hover:text-purple-400">
+                        Skills
+                        <span
+                            class="absolute left-0 -bottom-1 w-0 h-[3px] bg-gradient-to-r from-purple-500 via-pink-500 to-orange-400 transition-all duration-500 group-hover:w-full"></span>
+                    </a>
+                </li>
+
+                <li class="group">
+                    <a href="#projects"
+                        class="relative text-gray-300 font-medium transition-all duration-300 group-hover:text-purple-400">
+                        Projects
+                        <span
+                            class="absolute left-0 -bottom-1 w-0 h-[3px] bg-gradient-to-r from-purple-500 via-pink-500 to-orange-400 transition-all duration-500 group-hover:w-full"></span>
+                    </a>
+                </li>
+
+                <li class="group">
+                    <a href="#about "
+                        class="relative text-gray-300 font-medium transition-all duration-300 group-hover:text-purple-400">
+                        About Me
+                        <span
+                            class="absolute left-0 -bottom-1 w-0 h-[3px] bg-gradient-to-r from-purple-500 via-pink-500 to-orange-400 transition-all duration-500 group-hover:w-full"></span>
+                    </a>
+                </li>
+
+                <li class="group">
+                    <a href="#contact"
+                        class="relative text-gray-300 font-medium transition-all duration-300 group-hover:text-purple-400">
+                        Contact Me
+                        <span
+                            class="absolute left-0 -bottom-1 w-0 h-[3px] bg-gradient-to-r from-purple-500 via-pink-500 to-orange-400 transition-all duration-500 group-hover:w-full"></span>
+                    </a>
+                </li>
+
+            </ul>
+
+
+
+
+            <style>
+                .hire-btn {
+                    background: linear-gradient(135deg, #e616f9, #fb923c);
+                    padding: 10px 18px;
+                    border-radius: 8px;
+                    font-weight: bold;
+                    color: white;
+                    transition: 0.3s;
+                }
+
+                .hire-btn:hover {
+                    transform: scale(1.08);
+                    box-shadow: 0 0 5px #fb923c, 0 0 30px #b116f9;
+                }
+            </style>
+
+
+
+            <div class="bg-slate-900 flex justify-center items-center h-screen">
+
+
+                <a href="https://wa.me/918684900989" target="_blank"
+                    class="bg-orange-500 px-5 py-2 rounded-lg hover:scale-110 transition hire-btn">
+                    Hire Me
+                </a>
+
+
+
+                </ul>
+                </div>
+
+        </nav>
+
+
+
+        <!-- HERO CARD -->
+        <section class="flex justify-center items-center mt-16 
+transition-all duration-500 transform hover:-translate-y-3 
+hover:shadow-pink-500 hover:shadow-2x1">
+
+            <div class="bg-gray-800 p-10 rounded-2xl shadow-lg max-w-4xl 
+flex flex-col md:flex-row items-center gap-10 
+transition-all duration-500 hover:scale-105">
+
+                <img src="IMG_7140.JPG.jpeg" class="w-40 h-40 rounded-full object-cover border-4 border-purple-400 
+transition duration-500 hover:scale-110 hover:border-pink-400 shadow-2x1">
+
+                <div>
+                    <h2 class="text-3xl font-bold text-purple-400">Hello I'm Vishal</h2>
+
+                    <p class="text-gray-300 mt-4">
+                        I have a solid understanding of HTML, CSS, and JavaScript, which allows me to build responsive
+                        and interactive websites. I use HTML to structure web pages, CSS to design modern and visually
+                        appealing layouts, and JavaScript to add dynamic functionality and user interaction. I enjoy
+                        creating clean, user-friendly interfaces and continuously improving my skills by working on real
+                        projects. These technologies help me turn creative ideas into functional web experiences.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+    </div>
+
+
+
+    <style>
+        /* Fade animation */
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-up {
+            animation: fadeUp 1s ease forwards;
+        }
+
+        /* skill bar */
+        .skill-bar {
+            width: 0;
+            transition: width 2s ease;
+        }
+
+        /* hover card */
+        .skill-card {
+            transition: all .4s ease;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, .4);
+        }
+    </style>
+
+
+    <div class="bg-gray-900 text-white font-sans">
+
+        <section id="skills" class="mt-20 px-10 max-w-3xl mx-auto">
+
+            <h2 class="text-4xl font-bold text-purple-400 text-center mb-12 fade-up text-5xl font-bold tracking-wide">
+                My Skills
+            </h2>
+
+
+            <div class="space-y-8">
+
+                <!-- HTML -->
+                <div class="skill-card">
+                    <div class="flex justify-between mb-2">
+                        <span>HTML</span>
+                        <span>96%</span>
+                    </div>
+
+                    <div class="w-full bg-gray-700 h-3 rounded">
+                        <div class="skill-bar bg-orange-500 h-3 rounded" data-width="96%"></div>
+                    </div>
+                </div>
+
+                <!-- CSS -->
+                <div class="skill-card">
+                    <div class="flex justify-between mb-2">
+                        <span>CSS</span>
+                        <span>75%</span>
+                    </div>
+
+                    <div class="w-full bg-gray-700 h-3 rounded">
+                        <div class="skill-bar bg-blue-500 h-3 rounded" data-width="75%"></div>
+                    </div>
+                </div>
+
+                <!-- Tailwind -->
+                <div class="skill-card">
+                    <div class="flex justify-between mb-2">
+                        <span>Tailwind CSS</span>
+                        <span>20%</span>
+                    </div>
+
+                    <div class="w-full bg-gray-700 h-3 rounded">
+                        <div class="skill-bar bg-cyan-400 h-3 rounded" data-width="20%"></div>
+                    </div>
+                </div>
+
+                <!-- JavaScript -->
+                <div class="skill-card">
+                    <div class="flex justify-between mb-2">
+                        <span>JavaScript</span>
+                        <span>40%</span>
+                    </div>
+
+                    <div class="w-full bg-gray-700 h-3 rounded">
+                        <div class="skill-bar bg-yellow-400 h-3 rounded" data-width="40%"></div>
+                    </div>
+                </div>
+                </div>
+
+        
+        </section>
+
+        <script>
+
+            /* Scroll animation */
+
+            const bars = document.querySelectorAll(".skill-bar");
+
+            window.addEventListener("scroll", () => {
+
+                bars.forEach(bar => {
+
+                    const position = bar.getBoundingClientRect().top;
+                    const screen = window.innerHeight;
+
+                    if (position < screen) {
+                        bar.style.width = bar.dataset.width;
+                    }
+
+                });
+
+            });
+
+        </script>
+    </div>
+
+
+
+
+    <!-- Tailwind CSS -->
+
+
+
+    <style>
+        body {
+            background: radial-gradient(circle at top, #020617, #000);
+        }
+
+        /* glowing border */
+        .card-glow {
+            position: relative;
+        }
+
+        .card-glow::before {
+            content: "";
+            position: absolute;
+            inset: -2px;
+            background: linear-gradient(45deg, #06b6d4, #9333ea, #06b6d4);
+            filter: blur(2px);
+            opacity: 0.5;
+            transition: .5s;
+            border-radius: 10px;
+        }
+
+        .card-glow:hover::before {
+            opacity: 0;
+        }
+    </style>
+
+
+    <div class="text-white font-sans">
+
+        <!-- heading -->
+        <section id="projects" class="py-20 px-6 max-w-7xl mx-auto">
+
+            <h2 class="text-4xl font-bold text-purple-400 text-center mb-12 text-5xl font-bold tracking-wide">My
+                Projects</h2>
+
+            <div class="grid md:grid-cols-2 gap-10">
+
+                <!-- CARD -->
+                <div
+                    class="relative p-[2px] rounded-xl bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 hover:scale-105 transition duration-500">
+
+                    <div class="bg-gray-800 rounded-xl p-6 text-center shadow-xl backdrop-blur-lg">
+
+                        <img src="https://images.unsplash.com/photo-1581594693702-fbdc51b2763b"
+                            class="w-full h-60 object-cover rounded-lg transition duration-500 hover:opacity-80">
+
+                        <h2 class="text-cyan-400 mt-4 text-xl font-semibold">
+                            Mahaluxmi Lab
+                        </h2>
+
+                        <a href="https://mahaluxmilab.com/" target="_blank"
+                            class="inline-block mt-4 px-5 py-2 bg-cyan-500 hover:bg-cyan-400 rounded transition duration-300 hover:scale-110 shadow-lg shadow-cyan-500/40">
+                            View Project
+                        </a>
+
+                    </div>
+                </div>
+
+                <!-- CARD -->
+                <div
+                    class="relative p-[2px] rounded-xl bg-gradient-to-r from-green-400 via-emerald-500 to-lime-400 hover:scale-105 transition duration-500">
+
+                    <div class="bg-gray-800 rounded-xl p-6 text-center shadow-xl backdrop-blur-lg">
+
+                        <img src="https://images.picxy.com/cache/2020/5/18/00f9acc81344637a69cf7ab728c28e07.jpg"
+                            class="w-full h-60 object-cover rounded-lg transition duration-500 hover:opacity-80">
+
+                        <h2 class="text-green-400 mt-4 text-xl font-semibold">
+                            Nursery
+                        </h2>
+
+                        <a href="https://nurserylive.com/" target="_blank"
+                            class="inline-block mt-4 px-5 py-2 bg-green-500 hover:bg-green-400 rounded transition duration-300 hover:scale-110 shadow-lg shadow-green-500/40">
+                            View Project
+                        </a>
+
+                    </div>
+                </div>
+                </div>
+
+                <!-- CARD -->
+                <div
+                    class="relative p-[2px] rounded-xl bg-gradient-to-r from-purple-500 via-pink-500 to-indigo-500 hover:scale-105 transition duration-500">
+
+                    <div class="bg-gray-800 rounded-xl p-6 text-center shadow-xl backdrop-blur-lg">
+
+                        <img src="https://images.unsplash.com/photo-1615874959474-d609969a20ed"
+                            class="w-full h-80 rounded-lg transition duration-500 hover:opacity-80">
+
+                        <h2 class="text-purple-400 mt-4 text-xl font-semibold text-3xl font-semibold mt-4">
+                            Furniture
+                        </h2>
+
+                        <a href="https://furniture-rho-murex.vercel.app/" target="_blank"
+                            class="inline-block mt-4 px-5 py-2 bg-purple-500 hover:bg-purple-400 rounded transition duration-300 hover:scale-110 shadow-lg shadow-purple-500/40">
+                            Live Link
+                        </a>
+
+                    </div>
+                </div>
+
+                <!-- CARD -->
+                <div
+                    class="relative p-[2px] rounded-xl bg-gradient-to-r from-yellow-400 via-orange-400 to-pink-500 hover:scale-105 transition duration-500">
+
+                    <div class="bg-gray-800 rounded-xl p-6 text-center shadow-xl backdrop-blur-lg">
+
+                        <img src="WhatsApp Image 2026-03-11 at 4.11.35 PM.jpeg"
+                            class="w-full h-80 rounded-lg transition duration-500 hover:opacity-80">
+
+                        <h2 class="text-yellow-400 mt-4 text-xl font-semibold text-3xl font-semibold mt-4">
+                            Dikota
+                        </h2>
+
+                        <a href="https://dikota-all.vercel.app/" target="_blank"
+                            class="inline-block mt-4 px-5 py-2 bg-yellow-500 hover:bg-yellow-400 rounded transition duration-300 hover:scale-110 shadow-lg shadow-yellow-500/40">
+                            Live Link
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+
+          
+        </section>
+
+        <section class="py-16 bg-gray-800 text-white">
+
+            <h3 id="about" class="text-5xl font-bold text-purple-400 text-center mb-12 tracking-wide">
+                About Me
+            </h3>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+
+                <a href="#" class="group relative bg-gray-900 p-6 rounded-xl text-center shadow-lg
+transition-all duration-500 ease-out
+transform hover:-translate-y-4 hover:scale-105 hover:shadow-2xl">
+
+                    <span class="relative z-10 transition-all duration-500 group-hover:tracking-widest">
+                        HTML
+                    </span>
+
+                    <span class="absolute inset-0 rounded-xl bg-gradient-to-r from-orange-500 via-pink-500 to-purple-500 
+opacity-0 group-hover:opacity-100 blur-xl transition-all duration-700 ease-in-out"></span>
+
+                </a>
+
+                <a href="#" class="group relative bg-gray-900 p-6 rounded-xl text-center shadow-lg
+transition-all duration-500 ease-out
+transform hover:-translate-y-4 hover:scale-105 hover:shadow-2xl">
+
+                    <span class="relative z-10 transition-all duration-500 group-hover:tracking-widest">
+                        CSS
+                    </span>
+
+                    <span class="absolute inset-0 rounded-xl bg-gradient-to-r from-blue-500 via-cyan-400 to-indigo-500 
+opacity-0 group-hover:opacity-100 blur-xl transition-all duration-700 ease-in-out"></span>
+
+                </a>
+
+                <a href="#" class="group relative bg-gray-900 p-6 rounded-xl text-center shadow-lg
+transition-all duration-500 ease-out
+transform hover:-translate-y-4 hover:scale-105 hover:shadow-2xl">
+
+                    <span class="relative z-10 transition-all duration-500 group-hover:tracking-widest">
+                        React
+                    </span>
+
+                    <span class="absolute inset-0 rounded-xl bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 
+opacity-0 group-hover:opacity-100 blur-xl transition-all duration-700 ease-in-out"></span>
+
+                </a>
+
+                <a href="#" class="group relative bg-gray-900 p-6 rounded-xl text-center shadow-lg
+transition-all duration-500 ease-out
+transform hover:-translate-y-4 hover:scale-105 hover:shadow-2xl">
+
+                    <span class="relative z-10 transition-all duration-500 group-hover:tracking-widest">
+                        JavaScript
+                    </span>
+
+                    <span class="absolute inset-0 rounded-xl bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 
+opacity-0 group-hover:opacity-100 blur-xl transition-all duration-700 ease-in-out"></span>
+
+                </a>
+
+                <a href="#" class="group relative bg-gray-900 p-6 rounded-xl text-center shadow-lg
+transition-all duration-500 ease-out
+transform hover:-translate-y-4 hover:scale-105 hover:shadow-2xl">
+
+                    <span class="relative z-10 transition-all duration-500 group-hover:tracking-widest">
+                        Python
+                    </span>
+
+                    <span class="absolute inset-0 rounded-xl bg-gradient-to-r from-green-400 via-emerald-500 to-teal-500 
+opacity-0 group-hover:opacity-100 blur-xl transition-all duration-700 ease-in-out"></span>
+
+                </a>
+
+            </div>
+
+        </section>
+        </div>
+
+
+
+
+
+
+
+
+
+        <div class="bg-gray-900 flex items-center justify-center min-h-screen">
+
+            <section class="w-full max-w-4xl bg-gray-800 p-10 rounded-2xl shadow-xl">
+
+                <h2 id="contact" class="text-4xl font-bold text-center text-purple-400 mb-8 text-5xl font-bold tracking-wide">
+                    Contact Me
+                </h2>
+
+                <form id="contactForm" class="grid md:grid-cols-2 gap-6">
+
+                    <input id="name" type="text" placeholder="Your Name"
+                        class="p-3 rounded-lg bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-cyan-400 transition">
+
+                    <input id="email" type="email" placeholder="Your Email"
+                        class="p-3 rounded-lg bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-cyan-400 transition">
+
+                    <input id="subject" type="text" placeholder="Subject"
+                        class="p-3 rounded-lg bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-cyan-400 transition md:col-span-2">
+
+                    <textarea id="message" placeholder="Your Message"
+                        class="p-3 rounded-lg bg-gray-700 text-white h-32 focus:outline-none focus:ring-2 focus:ring-cyan-400 transition md:col-span-2"></textarea>
+
+                    <button type="button" onclick="sendToWhatsApp()" class="group relative md:col-span-2 px-6 py-3 rounded-lg font-bold text-black
+bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500
+transition-all duration-500 ease-out
+transform hover:-translate-y-1 hover:scale-105 hover:shadow-2xl overflow-hidden">
+
+                        <span class="relative z-10 transition-all duration-500 group-hover:tracking-wider">
+                            Send Message
+                        </span>
+
+                        <!-- glow -->
+                        <span class="absolute inset-0 bg-cyan-400 opacity-0 group-hover:opacity-40 
+blur-xl transition-all duration-700"></span>
+
+                        <!-- shine effect -->
+                        <span class="absolute left-[-100%] top-0 w-full h-full bg-white/30 
+skew-x-12 transition-all duration-700 group-hover:left-[120%]"></span>
+
+                    </button>
+
+                </form>
+
+            </section>
+        </div>
+
+        <script>
+            function sendToWhatsApp() {
+                let name = document.getElementById("name").value;
+                let email = document.getElementById("email").value;
+                let subject = document.getElementById("subject").value;
+                let message = document.getElementById("message").value;
+
+                let phoneNumber = "918684900989"; // apna number daalo (91 = India code)
+
+                let text = `Name: ${name}%0AEmail: ${email}%0ASubject: ${subject}%0AMessage: ${message}`;
+
+                let url = `https://wa.me/${phoneNumber}?text=${text}`;
+
+                window.open(url, "_blank");
+            }
+        </script>
+
+
+
+
+
+
+     
+
+        <footer class="bg-gray-950 text-white py-8 text-center">
+
+            <h2 class="text-xl font-semibold mb-4 text-purple-400">
+                Vishal Portfolio
+            </h2>
+
+            <p class="text-gray-400 mb-6">
+                Connect with me on social media
+            </p>
+            <div class="flex justify-center gap-6 mb-6">
+
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/vishal_rawal_02/?__pwa=1" target="_blank" class="group relative w-14 h-14 flex items-center justify-center rounded-full 
+  bg-gradient-to-r from-pink-500 via-purple-500 to-yellow-500
+  transition-all duration-500 ease-out
+  transform hover:-translate-y-2 hover:scale-110 hover:rotate-6 shadow-lg hover:shadow-2xl">
+
+                    <i class="fab fa-instagram text-white text-xl transition duration-500 group-hover:scale-125"></i>
+
+                    <!-- glow -->
+                    <span class="absolute inset-0 rounded-full bg-pink-500 opacity-0 
+    group-hover:opacity-40 blur-xl transition-all duration-700"></span>
+
+                </a>
+
+                <!-- YouTube -->
+                <a href="https://youtube.com/@vishalrawal18?si=P-IoMy7YKOzJU-Au" target="_blank" class="group relative w-14 h-14 flex items-center justify-center rounded-full 
+  bg-gradient-to-r from-red-500 to-orange-500
+  transition-all duration-500 ease-out
+  transform hover:-translate-y-2 hover:scale-110 hover:-rotate-6 shadow-lg hover:shadow-2xl">
+
+                    <i class="fab fa-youtube text-white text-xl transition duration-500 group-hover:scale-125"></i>
+
+                    <!-- glow -->
+                    <span class="absolute inset-0 rounded-full bg-red-500 opacity-0 
+    group-hover:opacity-40 blur-xl transition-all duration-700"></span>
+
+                </a>
+
+            </div>
+
+            <p class="text-gray-500 text-sm">
+                © 2026 Vishal Portfolio | All Rights Reserved
+            </p>
+
+        </footer>
+
+
+
+
+    </body>
+
+</html>
